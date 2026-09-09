@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#eee8dc">
+<title>postcard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=DM+Mono:wght@400;500&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app" aria-label="Postcard scrapbook animation">
+  <div class="stage" id="stage">
+    <section class="scene postcard-scene is-active" id="postcardScene" aria-hidden="false">
+      <div class="paper-light"></div>
+      <div class="postcard">
+        <div class="postcard-border"></div>
+        <div class="postcard-title">POSTCARD</div>
+        <div class="stamp">✉</div>
+        <div class="postcard-divider"></div>
+        <div class="address-lines"></div>
+        <div class="postcard-lyric lyric" id="postcardLyric"></div>
+        <div class="postcard-signature">from me</div>
+      </div>
+      <button class="start" id="start">click to open this envelope</button>
+    </section>
+
+    <section class="scene sent-scene" id="sentScene" aria-hidden="true">
+      <div class="sent-paper"></div>
+      <div class="sent-word sent">SENT</div>
+      <div class="sent-envelope">
+        <div class="envelope-flap"></div>
+        <div class="envelope-fold left"></div><div class="envelope-fold right"></div>
+      </div>
+      <div class="sent-word to">TO</div>
+      <div class="sent-word you">YOU</div>
+    </section>
+
+    <section class="scene truck-scene" id="truckScene" aria-hidden="true">
+      <div class="sky"></div>
+      <div class="cloud cloud1"></div><div class="cloud cloud2"></div>
+      <svg class="landscape" viewBox="0 0 1000 750" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 520 Q120 440 245 500 T490 490 T760 505 T1000 470 V750 H0Z" fill="#e7dfd1"/>
+        <path d="M0 590 Q180 520 340 575 T690 560 T1000 545 V750 H0Z" fill="#302a25" opacity=".92"/>
+        <g fill="none" stroke="#25211e" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M115 515 L155 405 L195 515 M130 480 L180 480 M143 445 L169 445"/>
+          <path d="M215 525 L250 430 L285 525 M227 486 L273 486 M239 455 L261 455"/>
+          <path d="M785 505 L820 405 L855 505 M798 470 L842 470 M808 438 L832 438"/>
+        </g>
+      </svg>
+      <div class="truck" id="truck">
+        <div class="truck-box">
+          <div class="tiny-envelope"></div>
+          <div class="truck-copy">did<br>it<br>go</div>
+        </div>
+        <div class="truck-cab"><div class="truck-window"></div><div class="truck-bumper"></div></div>
+        <div class="wheel wa"></div><div class="wheel wb"></div>
+      </div>
+      <div class="through-word">THROUGH?</div>
+      <div class="truck-lyric lyric" id="truckLyric"></div>
+    </section>
+
+    <section class="scene phone-scene" id="phoneScene" aria-hidden="true">
+      <div class="phone-paper"></div>
+      <div class="phone" id="phone">
+        <div class="phone-top"><span>○</span><b>Instagram</b><span>⌁</span></div>
+        <div class="post-head"><i></i><strong>sending all my love</strong><span>⌄</span></div>
+        <img src="assets/photos/photo-1.jpg" alt="Photo in the post">
+        <div class="post-actions">♡　○　△　　　　　　　　　⌑</div>
+        <div class="post-nav">⌂　⌕　⊕　♡　◉</div>
+      </div>
+      <div class="bubble bubble1">you: <b>ganda mo pooo</b></div>
+      <div class="bubble bubble2">you: <b>cantik</b></div>
+      <div class="bubble bubble3">you: <b>pretty</b></div>
+      <div class="bubble bubble4">you: <b>beautiful.....</b></div>
+      <div class="bubble bubble5">to you</div>
+      <div class="bubble bubble6">美しい</div>
+      <div class="phone-lyric lyric" id="phoneLyric"></div>
+    </section>
+
+    <section class="scene board-scene" id="boardScene" aria-hidden="true">
+      <div class="board-texture"></div>
+      <div class="board-vignette"></div>
+      <div class="red-string string-a"></div><div class="red-string string-b"></div>
+      <div class="pin pin-a"></div><div class="pin pin-b"></div>
+      <div class="note">
+        <div class="note-inner"></div>
+        <div class="note-lines"></div>
+        <div class="note-heading">you are</div>
+        <div class="note-lyric lyric" id="boardLyric"></div>
+      </div>
+      <div class="polaroid back"><img src="assets/photos/photo-6.jpg" alt="Photo"></div>
+      <div class="polaroid main"><img src="assets/photos/photo-4.jpg" alt="Photo"></div>
+      <div class="polaroid small"><img src="assets/photos/photo-5.jpg" alt="Photo"></div>
+      <div class="board-caption">every night</div>
+    </section>
+
+    <section class="scene ending-scene" id="endingScene" aria-hidden="true">
+      <div class="desk-texture"></div><div class="lamp-glow"></div>
+      <div class="clock"><span></span></div>
+      <div class="record"><div class="record-ring"></div><div class="record-label"></div><div class="record-hole"></div></div>
+      <div class="camera"><div class="viewfinder"></div><div class="lens"><i></i></div><div class="flash"></div></div>
+      <div class="desk-photo p1"><img src="assets/photos/photo-5.jpg" alt="Photo"></div>
+      <div class="desk-photo p2"><img src="assets/photos/photo-2.jpg" alt="Photo"></div>
+      <div class="desk-photo p3"><img src="assets/photos/photo-3.jpg" alt="Photo"></div>
+      <div class="ending-caption">giving<br>all of my love</div>
+      <div class="ending-lyric lyric" id="endingLyric"></div>
+    </section>
+  </div>
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="controls" id="controls">
+    <button class="play" id="playPause" aria-label="Play or pause">▶</button>
+    <div class="progress" id="progress" role="slider" aria-label="Audio progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0"><span id="progressBar"></span></div>
+  </div>
+  <audio id="song" preload="auto" src="assets/audio/song.mp3"></audio>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
