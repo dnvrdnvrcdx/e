@@ -3,12 +3,12 @@
   Use your own permitted text. Times are seconds from the start of the audio.
 */
 const lyrics = [
-  { time: 0.00, text: "TYPE LYRIC 01 HERE" },
-  { time: 3.30, text: "TYPE LYRIC 02 HERE" },
-  { time: 7.80, text: "TYPE LYRIC 03 HERE" },
-  { time: 12.00, text: "TYPE LYRIC 04 HERE" },
-  { time: 17.00, text: "TYPE LYRIC 05 HERE" },
-  { time: 24.00, text: "TYPE LYRIC 06 HERE" }
+  { time: 0.00, text: "I text a postcard sent to you" },
+  { time: 3.30, text: "Did it go through?" },
+  { time: 7.80, text: "Sendin' all my love to you" },
+  { time: 12.00, text: "You are the moonlight of my lifeE" },
+  { time: 17.00, text: "Every night" },
+  { time: 24.00, text: "Givin' all my love to you" }
 ];
 
 /* 31.74s is the reference cut; the audio file is ~31.74s. */
