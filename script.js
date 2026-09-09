@@ -5,9 +5,9 @@
 const lyrics = [
   { time: 0.00, text: "I text a postcard sent to you" },
   { time: 3.30, text: "Did it go through?" },
-  { time: 7.80, text: "Sendin' all my love to you" },
-  { time: 12.00, text: "You are the moonlight of my lifeE" },
-  { time: 17.00, text: "Every night" },
+  { time: 8.00, text: "Sendin' all my love to you" },
+  { time: 16.00, text: "You are the moonlight of my life" },
+  { time: 19.00, text: "Every night" },
   { time: 24.00, text: "Givin' all my love to you" }
 ];
 
